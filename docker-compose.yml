@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+  mpd:
+    environment:
+      - MPD_SERVER=192.168.2.150
+      - MPD_PORT=8000
+      - MPD_PASSWORD=57obphZ95Av2aM
+      - MPD_NAME=Monkey Radio (Docker)
+      - MPD_MOUNT=stream.mp3
+    build: .
+    ports:
+      - "6600:6600"
+    volumes:
+      - ./Music:/music
+      - mpd_data:/mpd
+volumes:
+  mpd_data: {}
