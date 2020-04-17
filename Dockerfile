@@ -16,5 +16,4 @@ ENV DOCKER_MPD_PASSWORD changeme
 ENV DOCKER_MPD_NAME My MPD Stream
 ENV DOCKER_MPD_MOUNT /stream.mp3
 
-#ENTRYPOINT ["/entrypoint.sh"]
-CMD ["ash"]
+ENTRYPOINT ["/entrypoint.sh"]
