@@ -20,3 +20,5 @@ echo "playing"
 mpc random on
 mpc play
 
+echo "watching log..."
+tail -f /var/log/mpd.log
