@@ -2,8 +2,8 @@ version: '3.0'
 services:
   mpd:
     environment:
-      - MPD_SERVER=192.168.2.150
-      - MPD_PASSWORD=57obphZ95Av2aM
+      - DOCKER_MPD_SERVER=192.168.2.150
+      - DOCKER_MPD_PASSWORD=57obphZ95Av2aM
     build: .
     ports:
       - "6600:6600"

@@ -10,9 +10,11 @@ COPY mpd.conf /etc/
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
-ENV MPD_SERVER 127.0.0.1
-ENV MPD_PORT 8000
-ENV MPD_PASSWORD changeme
-ENV MPD_NAME My MPD Stream
+ENV DOCKER_MPD_SERVER 127.0.0.1
+ENV DOCKER_MPD_PORT 8000
+ENV DOCKER_MPD_PASSWORD changeme
+ENV DOCKER_MPD_NAME My MPD Stream
+ENV DOCKER_MPD_MOUNT /stream.mp3
 
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
+CMD ["ash"]
